@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Enter Student Details</h2>
+
+    <input type="number" id="hours" placeholder="Hours Studied">
+    <input type="number" id="previous_score" placeholder="Previous Score">
+    <input type="number" id="sleep" placeholder="Sleep Hours">
+    <input type="number" id="papers" placeholder="Sample Papers Practiced">
+
+    <select id="activity">
+        <option value="Yes">Extracurricular Activities - Yes</option>
+        <option value="No">Extracurricular Activities - No</option>
+    </select>
+
+    <button class="btn" onclick="getPrediction()">Predict</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
